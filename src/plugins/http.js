@@ -1,0 +1,25 @@
+import axios from 'axios'
+import store from '@/store'
+import router from '@/router'
+
+const http = axios.create({
+  baseURL: 'http://127.0.0.1:8000/',
+  headers: {
+    'X-Requested-With': 'XMLHttpRequest'
+  }
+})
+
+http.interceptors.response.use(function (response) {
+  return response
+}, error => {
+  if (error.response.status === 401) {
+    router.push('/')
+    store.dispatch('auth/logout')
+  }
+})
+
+export function install (Vue) {
+  Vue.prototype.$http = http
+}
+
+export default http
