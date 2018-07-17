@@ -5,9 +5,7 @@ import { array_get } from '@/utilities';
 
 const auth = {
   async login(credentials) {
-    console.log('login http')
     const response = await http.post('api/auth/login', credentials);
-    console.log(response.data)
     localStorage.setItem('access_token', response.data.access_token);
     this.initialize();
     store.dispatch('auth/login', response.data.user);
