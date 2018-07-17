@@ -16,3 +16,4 @@ Vue.use(Http)
 
 export { default as auth } from './auth'
 export { default as http } from './http'
+export { default as pusher } from './pusher'
