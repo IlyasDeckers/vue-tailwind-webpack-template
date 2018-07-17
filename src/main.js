@@ -4,18 +4,18 @@ import router from './router'
 import store from './store'
 import * as filters from './filters'
 import { sync } from 'vuex-router-sync'
+import VueHighlightJS from 'vue-highlightjs'
+
 import '@/plugins'
-import * as components from './components'
+import '@/components/_globals'
 
 sync(store, router)
-
-Object.keys(components).forEach(key => {
-  Vue.component(key, components[key])
-})
 
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
+
+Vue.use(VueHighlightJS)
 
 /* eslint-disable no-new */
 new Vue({
