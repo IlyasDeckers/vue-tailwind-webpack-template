@@ -24,6 +24,48 @@
     </div>
 
     <div class="border-b">
+      <h2 class="py-2">1.2. Authentication</h2>
+    </div>
+
+    <div class="flex my-4">
+      <div class="w-1/3 text-grey">
+        <p class="py-4 text-black">
+          Authentication is handled bij the Auth plugin located in <code>plugins/auth.js</code>. You can use this plugin from any page to login, logout, check,... without importing the auth plugin.
+        </p>
+        <p class="text-black">
+          Important! The auth plugin expects the Bearer token to be present in the response under <code>access_token</code>
+        </p>
+      </div>
+
+      <div class="w-2/3">
+        <pre class="w-full" v-highlightjs="auth">
+          <code class="javascript bg-grey-lighter rounded-lg border p-4"></code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="border-b">
+      <h2 class="py-2">1.3. Pusher</h2>
+    </div>
+
+    <div class="flex my-4">
+      <div class="w-1/3 text-grey">
+        <p class="py-4 text-black">
+          eee.
+        </p>
+      </div>
+
+      <div class="w-2/3">
+        <pre class="w-full" v-highlightjs="pusher">
+          <code class="javascript bg-grey-lighter rounded-lg border p-4"></code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="">
+      <h1>UI</h1>
+    </div>
+    <div class="border-b">
       <h2 class="py-2">1. buttons</h2>
     </div>
     <div class="flex my-4">
@@ -68,43 +110,6 @@
     <div class="border-b">
       <h2 class="py-2">3. Select</h2>
     </div>
-
-    <div class="border-b">
-      <h2 class="py-2">4. Authentication</h2>
-    </div>
-
-    <div class="flex my-4">
-      <div class="w-1/3 text-grey">
-        <p class="py-4 text-black">
-          Authentication is handled bij the Auth plugin located in <code>plugins/auth.js</code>. You can use this plugin from any page to login, logout, check,... without importing the auth plugin.
-        </p>
-        <p class="text-black">
-          Important! The auth plugin expects the Bearer token to be present in the response under <code>access_token</code>
-        </p>
-      </div>
-
-      <div class="w-2/3">
-        <pre class="w-full" v-highlightjs="auth">
-          <code class="javascript bg-grey-lighter rounded-lg border p-4"></code>
-        </pre>
-      </div>
-    </div>
-
-    <div class="border-b">
-      <h2 class="py-2">5. Pusher</h2>
-    </div>
-
-    <div class="w-1/3 text-grey">
-      <p class="py-4 text-black">
-
-      </p>
-    </div>
-
-    <div class="w-2/3">
-        <pre class="w-full" v-highlightjs="pusher">
-          <code class="javascript bg-grey-lighter rounded-lg border p-4"></code>
-        </pre>
-      </div>
   </div>
 </template>
 
@@ -157,6 +162,13 @@ export default {
         this.$auth.hello()
       `
     }
+  },
+  mounted () {
+    this.$store.dispatch('auth/login', {
+      user: 'Ilyas'
+    })
+
+    this.$store.dispatch('auth/ready')
   }
 }
 </script>
