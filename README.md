@@ -2,6 +2,15 @@
 
 > A Vue.js project
 
+## Features
+
+* Authentication with Vuex
+* Reusable components
+* Tailwind CSS
+* Prebuild SCSS examples
+* Fontawesome (PRO) inegration
+* ...
+
 ## Build Setup
 
 ``` bash
