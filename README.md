@@ -1,4 +1,4 @@
-# Vue.JS boilerplate
+# WIP: Vue.JS boilerplate
 > A Vue.js boilerplate for creating quality SPA's with the TailwindCSS framework.
 
 ## Introduction
