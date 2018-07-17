@@ -1,9 +1,9 @@
-const state = {
+export const state = {
   ready: false,
   authenticated: false,
   user: null
 }
-const actions = {
+export const actions = {
   login (context, payload) {
     context.commit('login', payload)
     context.commit('authenticate')
@@ -15,7 +15,7 @@ const actions = {
     context.commit('ready')
   }
 }
-const mutations = {
+export const mutations = {
   login (state, payload) {
     state.user = payload
   },
@@ -31,12 +31,3 @@ const mutations = {
     state.ready = true
   }
 }
-
-const auth = {
-  namespaced: true,
-  state,
-  actions,
-  mutations
-}
-
-export default auth
