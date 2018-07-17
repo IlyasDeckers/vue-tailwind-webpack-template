@@ -1,0 +1,59 @@
+/* eslint-disable */
+
+.btn {
+  @apply .h-10 .rounded .px-4 .inline-flex .items-center .justify-center;
+  transition: all 250ms;
+
+  &:hover {
+    @apply .shadow;
+    transform: translateY(-3px);
+  }
+}
+
+.btn-primary {
+  @apply .text-white .bg-blue;
+
+  &:hover {
+    @apply .bg-blue-light;
+  }
+}
+
+.btn-default {
+  @apply .text-black .bg-grey-light;
+
+  &:hover {
+    @apply .bg-grey-lighter;
+  }
+}
+
+.btn-info {
+  @apply .text-white .bg-blue;
+
+  &:hover {
+    @apply bg-blue-dark;
+  }
+}
+
+.btn-success {
+  @apply .bg-green .text-white;
+
+  &:hover {
+    @apply bg-green-light;
+  }
+}
+
+.btn-warning {
+  @apply .bg-orange .text-white;
+
+  &:hover {
+    @apply bg-orange-light;
+  }
+}
+
+.btn-danger {
+  @apply .bg-red .text-white;
+
+  &:hover {
+    @apply bg-red-light;
+  }
+}
