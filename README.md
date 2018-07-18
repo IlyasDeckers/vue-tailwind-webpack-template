@@ -12,4 +12,10 @@ This repository is created as a personal boilerplate for rapid Vue.JS developmen
 * Bootstrap like buttons
 * Fontawesome (PRO) inegration
 * Pusher intigration
+* Generate views, components,... with [hygen](https://github.com/jondot/hygen)
 
+## Documentation
+Not yet hosted, you can view the documentation in your browser on `http://127.0.0.1:8080` after running:
+```bash
+npm run docs:dev
+```
