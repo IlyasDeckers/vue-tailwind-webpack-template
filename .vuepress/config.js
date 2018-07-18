@@ -8,10 +8,18 @@ module.exports = {
       '/docs/configuration',
       '/docs/architecture',
       '/docs/development',
+      '/docs/production',
       '/docs/plugins',
       '/docs/routing',
       '/docs/store',
       '/docs/components'
+    ],
+    nav: [
+      {
+        text: 'Home',
+        link: '/'
+      },
+      { text: 'GitHub', link: 'https://github.com/IlyasDeckers' },
     ]
   },
 }
