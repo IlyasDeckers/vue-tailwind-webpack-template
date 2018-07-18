@@ -220,5 +220,3 @@ export function exists(val) {
 export function sum(array, key) {
   return array.map(x => x[key]).reduce((x, y) => x + y, 0);
 }
-
-
